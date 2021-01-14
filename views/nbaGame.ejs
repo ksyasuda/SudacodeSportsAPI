@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= team1 %> at. <%= team2 %></title>
+  </head>
+  <body style="background-color: #282c34">
+    <section style="border: 1px solid dodgerblue">
+      <h1 style="text-align: center; color: #a8d385">
+        <%= team1 %> at <%= team2 %>
+      </h1>
+      <section style="display: flex; justify-content: center; color: #a8d385">
+        <p
+          style="
+            margin: 40px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+          "
+        >
+          <%= competitors.team1.score %>
+        </p>
+        <span
+          style="
+            margin: 40px 40px 0px 40px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+          "
+          >-</span
+        >
+        <p
+          style="margin: 40px 40px 0px 40px; font-weight: bold; font-size: 20px"
+        >
+          <%= competitors.team2.score %>
+        </p>
+      </section>
+      <section
+        style="
+          display: flex;
+          justify-content: center;
+          position: relative;
+          top: -25px;
+        "
+      >
+        <img src="<%= logo1 %>" width="30%" />
+        <img src="<%= logo2 %>" width="30%" />
+      </section>
+      <div
+        style="
+          font-weight: bold;
+          font-size: 20px;
+          text-align: center;
+          position: relative;
+          top: -25px;
+          color: #a8d385;
+        "
+      >
+        <%= date %>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,14 +1,19 @@
-import express from 'express'
-import indexRoute from './routes/indexRoute'
-import getId from './routes/Utility/getId'
-import getGame from './routes/Utility/getGame'
+import express from "express";
+import indexRoute from "./routes/indexRoute";
+import getId from "./routes/Utility/getId";
+import getGame from "./routes/Utility/getGame";
 
-const app = express()
+const app = express();
 
-app.use(indexRoute)
-app.use(getId)
-app.use(getGame)
+app.set("view engine", "ejs");
+app.set("vews", "views");
 
-const port = 3000
+app.use(indexRoute);
+app.use(getId);
+app.use(getGame);
 
-app.listen(port, () => {console.log(`Listening on port: ${port}`)})
+const port = 3000;
+
+app.listen(port, () => {
+  console.log(`Listening on port: ${port}`);
+});
