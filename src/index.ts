@@ -1,7 +1,7 @@
 import express from "express";
 import indexRoute from "./routes/indexRoute";
-import getId from "./routes/Utility/getId";
-import getGame from "./routes/Utility/getGame";
+import getId from "./routes/getId";
+import getGame from "./routes/getGame";
 
 const app = express();
 

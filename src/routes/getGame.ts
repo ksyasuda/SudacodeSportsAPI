@@ -1,6 +1,6 @@
 import express from "express";
 import fetch from "node-fetch";
-import { nbaIds } from "./ids";
+import { nbaIds } from "./Utility/ids";
 
 const getGame = express.Router();
 
@@ -79,9 +79,11 @@ getGame.get("/get-game/:sport,:teamId", async (req, res, next) => {
           }
         });
         data.competitors = competitorData;
+        res.render("nbaGame", data);
       }
 
-      res.render("nbaGame", data);
+      res.send(data);
+
       break;
   }
 });
